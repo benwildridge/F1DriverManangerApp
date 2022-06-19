@@ -1,0 +1,23 @@
+﻿<Window x:Class="F1DriverMananger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:F1DriverMananger"
+        mc:Ignorable="d"
+        Title="F1DriverManager" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dgDriverList" Margin="56,99,40,30" RenderTransformOrigin="0.5,0.5" xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit" ItemsSource="{Binding}">
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.374"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-1.493"/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+        </DataGrid>
+        <Button x:Name="btnLoadData" Content="Load Data" HorizontalAlignment="Center" Margin="0,41,0,0" VerticalAlignment="Top" Width="220" Click="btnLoadData_Click"/>
+
+    </Grid>
+</Window>
